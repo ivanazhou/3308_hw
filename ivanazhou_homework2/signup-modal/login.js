@@ -14,10 +14,10 @@ function openModal() {
        console.log('helllooo')
         
         /* TODO: Question 1.1: Starts here */
-        var lowerCaseLetters = /dummy_regex/g; // : Fill in the regular experssion for lowerCaseLetters
-        var upperCaseLetters = /dummy_regex/g; // : Fill in the regular experssion for upperCaseLetters
-        var numbers = /dummy_regex/g; // : Fill in the regular experssion for digits
-        var minLength = 1000; // : Change the minimum length to what what it needs to be in the question 
+        var lowerCaseLetters =/[a-z]/g; // : Fill in the regular experssion for lowerCaseLetters
+        var upperCaseLetters = /[A-Z]/g; // : Fill in the regular experssion for upperCaseLetters
+        var numbers = /\d/g; // : Fill in the regular experssion for digits
+        var minLength = 8; // : Change the minimum length to what what it needs to be in the question 
         /* TODO: Question 1.1: Ends here */
         
 
