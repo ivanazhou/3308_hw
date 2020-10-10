@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="./manage-cards.js"></script>
+        
+        <title>About Me</title> 
+        <style>
+          table, th, td {
+            border: 1px solid black;
+          }
+          th, td {
+            padding: 5px;
+          }
+          .container{
+            padding-top:10px;
+            padding-bottom:10px;
+          }
+          #profpic{
+            border-radius:50%;
+          }
+          footer{
+            text-align: center;
+            padding: 3px;
+            background-color: gray;
+          }
+
+          .card-image-top {
+            height:30vh;
+            width: 100%;
+            object-fit: cover;
+            }
+        </style>
+      </head>
+      <body>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+
+            <!-- Links -->
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="mypage_bootstrap.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="../signup-modal/login.html">Sign up modal</a></li>
+              <li class="nav-item"><a class="nav-link" href="../tic-tac-toe/tic-tac-toe.html">Tic Tac Toe game</a></li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-brand" href="https://www.github.com/ivanazhou">
+                  <img src="github.jpg" width="30" height="30" alt="">
+                </a>
+              </li>
+              </li> 
+            </ul>
+        </nav>
+
+        <div class="container">
+            <h1>Zhou, Ivana - <small class="text-muted">CU Boulder</small></h1> 
+            <div class="card">
+              <div class="card-body">
+                  I'm an undergraduate at CU Boulder studying Chemical/Biological Engineering with a minor in CS. I'm originally from Chicago, IL, but I now live in Boulder, CO, year-round with my husband, dog, and two cats. I'm completing a minor in CS becaue I feel it is an applicable skill no matter what I choose to do after college!
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <img id="profpic" src="zhou.jpg" style="width:500px" alt="Image of me!">
+        </div>
+        
+        <div class="container">
+            <h3>Interests <a href="form.html" role="button" class="btn btn-info float-right">Add interest</a></h3>
+            <div class="card-deck">
+              <div class="card">
+                <img class="card-image-top" src="mtb.jpeg" alt="Photo of mountain biker" >
+                <div class="card-body" id="interest1">
+                  <h5 class="card-title">Mountain Biking</h5>
+                  <p class="card-text">I like mountain biking because it allows me to enjoy nature while also getting my fill of adrenaline.</p>
+                  <a class="btn btn-primary btn-sm" style="border-radius: 50%" onclick="addCard('interest1')">+</a>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-image-top" src="thermo.jpg" alt="Photo of match">
+                <div class="card-body" id="interest2">
+                  <h5 class="card-title">Thermodynamics</h5>
+                  <p class="card-text">I find thermodynamics to be one of the most fascinating subjects in chemical engineering</p>
+                  <a class="btn btn-primary btn-sm" style="border-radius: 50%" onclick="addCard('interest2')">+</a>
+                </div>
+              </div>
+              <div class="card">
+                <img class="card-image-top" src="piano.jpg" alt="Photo of piano keys">
+                <div class="card-body" id="interest3">
+                  <h5 class="card-title">Piano</h5>
+                  <p class="card-text">I've been playing piano since I was 5 years old.</p>
+                  <a class="btn btn-primary btn-sm" style="border-radius: 50%" onclick="addCard('interest3')">+</a>
+                </div>
+              </div>
+            </div>
+        </div>
+        <footer style="background-color: blanchedalmond;">
+          <a href="https://www.linkedin.com/in/ivana-zhou-b51a71154/"><img height="30" width="30" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEUAe7X///8AcbDi6/MAd7N9rM4Ac7G70eStyN/I2ukAebQAdbI5j79Unsjo8vjM4u7Y6fIfiLy00uWew9sHfrZvqs52qc3T5O+ly+FvpMpopcuMudcUg7qny+Hg7/ZDlMKAtNTw9/u92eljoMiTuNWBttWUwNukw9s5k8K61+jZwmoZAAAEoUlEQVR4nO2dbVvbIBSGgTJUSGjStNtsrX1x69b//weXtNMaDVR30YOePfcXP5RcF7e8JhxAyEeqpqynggV12VRPXuLv30mhnM6ds2Rop4pJz9CXxubOVWKsKf3JcCz4FN8JLcaPhmPFrQCPWDU+GnrBU7BVFP5gWHKsokd02RlOTO58XBA1aQ0LrnW0wxZSVCp3Li6KqkTjcmfiorhGMO5nOnQp6tx5uDC1YDLZBgAAAAAAAAAAAAAAAADAf43VRrUYx3SJ1Ro9b8YjX00WhWK4BmnN3fIprkrez/gFHLmd7FGteMU72GO0UY81p3gAa6tXgqwUrXtdgh1zNhEBZjEoKDd3XLqb6bCgZBNdZb6HDCWPQrR2EzRsWBSifggKSs+iO3051verae7cpUBtI4Ylh4aoRhHDrxyGxKjhFw6G5lvEkMW0xiwjhizijd06Yqg5GNoiLLhlMeILNfTqxKgZtpOaeUiQx5RGRAqRSRG2hRhoiXserbDDDdbTikM/+oiZDQhOORkKU25eVlFuG+DctPem7+d82uATRuzuj3qb7Vxx6UX7OHW3ur19KDRTvwNaa2uZNUAAwEfgsLQdoN+pukjKF6vG1radlnPmiOs6MEKlPub6JszDc0X3I5JycVK01hlRr+Y/d8ur9perSbOYlYU1uc7pePu3NnMVSXn9OAlqTcrd2L9K4G8WqzzxAWkNtSqWm2Aiv5tmCBBIaWhNMbzYemJfk894Uxrq5oxfR0N98EpCQ32uAI/4grY5JjO0JvzR7gUz0pqazNBMIj+/YEGpmMpQlW8XlPInoWIywzfX0QMlXVtMZbh6l6CUNdnAmMjw1zta4YExWZBnKsPNOw3lmqqeJjKMRQMMs6F63Uhk+A/siPrTfIYbovXXfIZyTTNBzWhY0VTTjIZyRVKIOQ1p+pqchhXJkJjTkGbqltVwRtEQsxpOKKppVkOS8SKrIUlYWV7D3wQNMa8hxStUckO/XTZNs9zfvyXxkqAhpjWs1nW3R7NbdVJ3X89/P90ShM6lNPRz87zrcKo8V5AUwYEJDV8flK71uc83n6qWDh6UrmJB1pJkR0cyQz8YCGfPfEcliCRPZjgb7vhjUdaSZM9KKsP7UIsy0c9wBHtWUhkuQmO3ji5oEAz5qQzDr3rTzb/8Yz6c4SY8sKnYrpzdpzEchwe2yCZVKb9/GsPInmEX2El97rkPZngdMfwSeY5gQ8DlDXXMkGDqndlwzN7wG/taSnDhSGbDEQxhCEMYwhCGMIQhDGEIQxjCEIYwhCEMYQhDGMIQhjCEIQxhCEMYwhCGMIQhDGEIQxjCEIYwhCEMYQhDGMKwj7kZBfG3z7druV/hlKMf4V129taHn7sh2CYbO0e4vx8tdo5wbBuhjTzH8Px+AAAAAAAAAAAAAAAAAAAAAAAA4ESdOwMXphYl46vfRXcqsWiy3LlLhmsEwVGLOVGVoDjlPB+2kILiZN58mH1rKBn3Nd3p562hF1zrqRX+YDh8DQMDrOouPekMB67S4IAWh1tdDobSl+yK0ZrSy5OhlJNCOT4FqZ0q9n/NxFP0bdWUXOaoddmcbjr5A5XhWJeQSJXvAAAAAElFTkSuQmCC"> </a>
+        </footer>
+      </body>
+    </html>
